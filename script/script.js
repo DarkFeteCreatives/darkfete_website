@@ -1,55 +1,44 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.querySelector('.sliderwrapper');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    let preventClick = false;
+// Hamburger Menu Toggle for Mobile
+document.querySelector('.navtogglemenu').addEventListener('click', function() {
+    var navbarList = document.querySelector('.navbarList');
+    if (navbarList.style.display === 'none' || navbarList.style.display === '') {
+        navbarList.style.display = 'flex';
+    } else {
+        navbarList.style.display = 'none';
+    }
+});
 
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.classList.add('active');
-        startX = e.pageX - slider.getBoundingClientRect().left;  // relative to the element
-        scrollLeft = slider.scrollLeft;
-    });
-
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    slider.addEventListener('mousemove', (e) => {
-        if(!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.getBoundingClientRect().left;  // relative to the element
-        const walk = (x - startX);
-        slider.scrollLeft = scrollLeft - walk;
-        preventClick = true; // Prevent single click after dragging
-    });
-
-    const links = slider.querySelectorAll('.itemproductlink');
-    
-    links.forEach(link => {
-        link.addEventListener('click', (e) => {
-            if (preventClick) {
-                e.preventDefault(); // This prevents the link from activating on single click after drag
+// Dropdown Menus Toggle
+var menuTriggers = document.querySelectorAll('.navbarMenuTrigger');
+for (var i = 0; i < menuTriggers.length; i++) {
+    menuTriggers[i].addEventListener('click', function(event) {
+        // Close any other open dropdowns
+        var allDropdowns = document.querySelectorAll('.navbarDropdown');
+        for (var j = 0; j < allDropdowns.length; j++) {
+            if (allDropdowns[j] !== event.target.nextElementSibling) {
+                allDropdowns[j].style.display = 'none';
             }
-        });
+        }
         
-        // Add double click event to links
-        link.addEventListener('dblclick', (e) => {
-            window.location.href = e.target.href; // This will redirect to the href of the link on double click
-        });
+        // Toggle the clicked dropdown
+        var dropdown = event.target.nextElementSibling;
+        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+            dropdown.style.display = 'block';
+        } else {
+            dropdown.style.display = 'none';
+        }
     });
-    
-    // Reset preventClick after some delay
-    document.addEventListener('mouseup', () => {
-        setTimeout(() => {
-            preventClick = false;
-        }, 50);
-    });
+}
+
+// Close dropdowns when clicked outside
+document.addEventListener('click', function(event) {
+    var isDropdownTrigger = event.target.matches('.navbarMenuTrigger');
+    var isInDropdown = event.target.closest('.navbarDropdown');
+
+    if (!isDropdownTrigger && !isInDropdown) {
+        var dropdowns = document.querySelectorAll('.navbarDropdown');
+        for (var k = 0; k < dropdowns.length; k++) {
+            dropdowns[k].style.display = 'none';
+        }
+    }
 });

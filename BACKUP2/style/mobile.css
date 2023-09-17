@@ -1,0 +1,15 @@
+@media screen and (min-width: 1200px) {
+    .site-footer {
+        flex-direction: column; /* Restore columns to horizontal layout on larger screens */
+        justify-content: space-between;
+    }
+
+    .footer-column {
+        flex: 1; /* Equal-width columns on larger screens */
+        margin-bottom: 0; /* Remove spacing between columns on larger screens */
+    }
+
+    .footer-column h4 {
+        margin-bottom: 15px; /* Restore space between header and links on larger screens */
+    }
+}
