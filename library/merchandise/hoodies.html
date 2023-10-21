@@ -425,7 +425,9 @@
 
 
 
-
+<section class="loading">
+<div class="loading-spinner"></div>
+</section>
 
 
 
@@ -469,5 +471,12 @@
 
 
 <script src="../../script/script.js"></script>
+
+<script>
+    setTimeout(function() {
+        var spinner = document.querySelector('.loading-spinner');
+        spinner.style.display = 'none';
+    }, 3000);
+</script>
 </body>
 </html>
