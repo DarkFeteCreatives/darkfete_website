@@ -47,8 +47,9 @@ body {
     justify-self: center;
     background-color: #232323;
     margin: auto;
-    border: 1px solid black;
+    border: 1px solid gold;
     border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 /* === TOP LEVEL NAV ITEMS === */
@@ -181,7 +182,169 @@ body {
     border-top: none;
 }
 
+.hot-item-title {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: #222;
+    border: 1px solid gold;
+    border-bottom: 0px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-top: 15px;
+    color: white;
+}
 
+.hot-item-card {
+    width: 100%;
+    height: 30vh;  
+    display: flex;
+    align-items: center;
+    border: 1px solid gold;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    margin: auto;
+    background: #222;
+}
+
+.hot-item-image {
+    height: 90%;
+    width: auto;
+    margin-right: 5px;
+    margin-left: 10px;
+    
+}
+
+.hot-item-image img {
+    height: 90%;
+    width: auto;  
+    border: 1px solid gold;  
+    border-radius: 15px; 
+}
+
+.hot-item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 98%;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding-left: 20px;
+    background: white;
+    margin: auto;
+    text-align: center;
+}
+
+.hot-item-content h2 {
+    font-weight: bold;
+}
+
+.shop-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;  
+    color: #FFF;  
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .hot-item-content h2 {
+        font-size: 100%;
+    }
+    .hot-item-content p {
+        display: none;
+    }
+    .hot-item-content {
+        height: 99%;
+        width: auto;
+        margin-right: 1px;        
+    }
+    .hot-item-card {
+        margin: auto;
+    }
+    .hot-item-card img {
+        margin: auto;
+    }
+}
+
+.extras-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5vh;
+    text-align: center;
+}
+
+.extras-button {
+    background: grey;
+    border: 1px solid gold;
+    height: 90%;
+    width: 90%;
+    margin: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.extras-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.extras-button p {
+    margin: auto;
+    justify-self: center;
+}
+
+
+
+
+
+
+
+
+/* === TEMPLATES AND TEMPATE SECTIONS === */
+
+.template-section {
+    width: 85%;
+    background-color: #eeeeee;
+    color: #000;
+    border: 1px solid #000;
+    padding: 20px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.templates {
+    display: flex;
+    flex-direction: column;
+}
+
+.templates img {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.template-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* === IMAGE STYLING === */
 
@@ -200,6 +363,33 @@ body {
     100% {
         filter: brightness(1) contrast(1) saturate(1);
     }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+/* === LOADING SPINNER === */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    border: 8px solid #f3f3f3;     /* Light gray border */
+    border-top: 8px solid #3498db; /* Blue border on top */
+    border-radius: 50%;            /* Makes it circular */
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite; /* Apply the spinning animation */
+    margin: auto;                   /* Center the spinner if the section has a fixed height and display: flex */
 }
 
 /* === OVERALL FOOTER STYLING === */
