@@ -8,6 +8,12 @@ document.querySelector('.navtogglemenu').addEventListener('click', function() {
     }
 });
 
+
+
+
+
+
+
 // Dropdown Menus Toggle
 var menuTriggers = document.querySelectorAll('.navbarMenuTrigger');
 for (var i = 0; i < menuTriggers.length; i++) {

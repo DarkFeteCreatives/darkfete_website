@@ -330,6 +330,13 @@ body {
     color: #fff400;
 }
 
+.cat-title {
+  text-align: center;
+  align-items:center;
+  justify-content: center;
+	
+}
+
 
 /*  === CATALOGUE ITEM CARDS --- TO PRODUCT PAGE */
 
