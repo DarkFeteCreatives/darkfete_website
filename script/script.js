@@ -8,6 +8,20 @@ document.querySelector('.navtogglemenu').addEventListener('click', function() {
     }
 });
 
+function loadPDF(pdfPath) {
+  // Remove 'active' class from all tabs
+  var tablinks = document.getElementsByClassName("tablinks");
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Set the clicked tab as active
+  document.querySelector(`[onclick="loadPDF('${pdfPath}')"]`).className += " active";
+
+  // Load the PDF in the iframe
+  document.getElementById('pdfViewer').src = pdfPath;
+}
+
 
 
 
