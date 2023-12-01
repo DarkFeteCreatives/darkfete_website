@@ -25,6 +25,8 @@ function loadPDF(pdfPath) {
 
 // EMAIL CONTACT FORMS HERE
 
+
+			// Join us email auto-fill
 document.getElementById('gmailLink').addEventListener('click', function() {
     var email = 'shopcustomerserv357@gmail.com';
     var subject = encodeURIComponent('ART SUBMISSIONS AND ROYALTIES SUBMISSION'); // Your subject line
@@ -44,6 +46,30 @@ document.getElementById('yahooLink').addEventListener('click', function() {
 });
 
 document.getElementById('protonMailLink').addEventListener('click', function() {
+    window.open('https://mail.protonmail.com/login', '_blank');
+});
+
+
+			// Contact us email auto-fill
+document.getElementById('gmailLinkcontact').addEventListener('click', function() {
+    var email = 'shopcustomerserv357@gmail.com';
+    var subject = encodeURIComponent('ART SUBMISSIONS AND ROYALTIES SUBMISSION'); // Your subject line
+    var emailBody = encodeURIComponent('Please attach your signed pdf documents here! Leave any comments below this line:'); // Your email body
+    var gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${emailBody}`;
+    
+    window.open(gmailUrl, '_blank');
+});
+
+document.getElementById('yahooLinkcontact').addEventListener('click', function() {
+    var email = 'shopcustomerserv357@gmail.com';
+    var subject = encodeURIComponent('ART SUBMISSIONS AND ROYALTIES SUBMISSION');
+    var emailBody = encodeURIComponent('Please attach your signed pdf documents here! Leave any comments below this line:');
+    var yahooUrl = `http://compose.mail.yahoo.com/?to=${email}&subj=${subject}&body=${emailBody}`;
+
+    window.open(yahooUrl, '_blank');
+});
+
+document.getElementById('protonMailLinkcontact').addEventListener('click', function() {
     window.open('https://mail.protonmail.com/login', '_blank');
 });
 

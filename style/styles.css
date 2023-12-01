@@ -382,40 +382,6 @@ body {
   filter: invert(1) contrast(0.8) brightness(1.4);
 }
 
-/*  === CONTRACTS INSTRUCTIONS ===  */
-
-.instructionText {
-    background-color: #333; /* Dark background color */
-    color: silver; /* Text color */
-    text-align: left; /* Align text to the left */
-    padding: 20px; /* Padding inside the div */
-    border: 2px solid silver; /* Border color */
-    border-radius: 15px; /* Rounded corners for the div */
-    margin-top: 15px; /* Margin at the top */
-    font-family: Arial, sans-serif; /* Font family */
-}
-
-.instructionText h1 {
-    margin: 15px 0; /* Margin for the heading */
-    font-size: 24px; /* Font size for the heading */
-}
-
-.instructionText ul {
-    list-style-type: none; /* Style of the ordered list */
-    padding-left: 40px; /* Padding for the list */
-}
-
-.instructionText li {
-    margin: 10px 0;
-    line-height: 1.6;
-}
-
-.instructionText img {
-    vertical-align: middle; /* Align images with the text */
-    margin-right: 5px; /* Spacing after images */
-}
-
-
 
 
 
@@ -659,3 +625,98 @@ footer a:hover {
 iframe {
   display: inline-block;
 }
+
+
+
+
+.emailformsection {
+    text-align: center;
+    padding: 20px;
+}
+
+.emailformsection .emailimg {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.emailformsection .emailimg img {
+    max-width: 100px;
+    height: auto;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.emailformsection .emailimg p {
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
