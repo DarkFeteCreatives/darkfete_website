@@ -400,14 +400,14 @@ body {
     font-size: 24px; /* Font size for the heading */
 }
 
-.instructionText ol {
-    list-style-type: decimal; /* Style of the ordered list */
+.instructionText ul {
+    list-style-type: none; /* Style of the ordered list */
     padding-left: 40px; /* Padding for the list */
 }
 
 .instructionText li {
-    margin: 10px 0; /* Margin for each list item */
-    line-height: 1.6; /* Line height for better readability */
+    margin: 10px 0;
+    line-height: 1.6;
 }
 
 .instructionText img {
