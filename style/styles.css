@@ -652,7 +652,11 @@ iframe {
 }
 
 
+/* FOOTER COLUMN ADJUST RULES */
 
+.footercolumn:nth-child(3) {
+    display: none;
+}
 
 
 
